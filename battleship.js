@@ -12,13 +12,6 @@ class Battleship {
     ];
 
     this.createBoard();
-    this.setShipLocation("A", 3, "vertical", 0);
-    this.setShipLocation("E", 8, "horizontal", 1);
-    this.setShipLocation("J", 10, "vertical", 2);
-    this.setShipLocation("C", 4, "vertical", 3);
-    this.setShipLocation("G", 3, "horizontal", 4);
-
-    return this;
   }
 
   createBoard() {
@@ -35,14 +28,14 @@ class Battleship {
 
   setShipLocation( coordA, coordB, direction, index ) {
     var shipIndex = 0;
-    var shipSize = this.ships[shipIndex].size;
+    var shipSize = this.ships[index].size;
 
     while ( shipIndex < shipSize ) {
-      var shipIndex = 0;
       var coordinates = [ coordA, coordB ];
       var direction = direction;
 
-      for ( var next = 0; next < shipSize; next++ ){
+      // based on direction & size set each 'pin' for ship on board
+      for ( var next = 0; next < shipSize; next++ ) {
         var newX = [(next - 2) + coord[0], coord[1]];
         var newY = [coord[0], (next - 2) + coord[1]];
 
