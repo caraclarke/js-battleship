@@ -108,9 +108,9 @@ class Battleship {
   callYourShot( coordinates ) {
     var flag = false;
 
-    for ( var i = 0; i < this.shipCount; i++ ) {
-      for ( x = 0; x < this.ships[i].coordinates.length; x++ ) {
-        if ( this.ships[i].coordinates[x][0] == coord[0] && this.ships[i].coordinates[x][1] == coord[1] ) {
+    for ( var i = 0; i < this.shipCount; i++; ) {
+      for ( j = 0; j < this.ships[i].coordinates.length; j++; ) {
+        if ( this.ships[i].coordinates[j][0] == coord[0] && this.ships[i].coordinates[j][1] == coord[1] ) {
           this.board[coord[0]][coord[1]] = 2;
           this.ships[i].hits++;
           flag = true;
@@ -121,6 +121,7 @@ class Battleship {
     if ( !flag ) {
       this.board[coord[0]][coord[1]] = 1;
     }
+
     this.sinkShip();
   }
 
