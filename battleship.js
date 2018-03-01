@@ -1,4 +1,3 @@
-/*Battleship Constructor*/
 class Battleship {
   constructor(boardSize) {
     this.boardSize = boardSize;
@@ -107,7 +106,8 @@ class Battleship {
   }
 
   callYourShot( coordinates ) {
-    flag = false;
+    var flag = false;
+
     for ( var i = 0; i < this.shipCount; i++ ) {
       for ( x = 0; x < this.ships[i].coordinates.length; x++ ) {
         if ( this.ships[i].coordinates[x][0] == coord[0] && this.ships[i].coordinates[x][1] == coord[1] ) {

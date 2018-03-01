@@ -11,8 +11,8 @@ Create a class or classes that represent an API for the game battleship.
 - The first person to sink all of the enemy ships wins the game.
 
 ## Game pieces
-- carrier: 5 holes
+- aircraft carrier: 5 holes
 - battleship: 4 holes
-- cruiser: 3 holes
 - submarine: 3 holes
-- destroyer: 2 holes
+- destroyer: 3 holes
+- patrol boat: 2 holes
